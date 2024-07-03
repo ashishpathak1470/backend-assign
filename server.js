@@ -68,7 +68,6 @@ app.delete('/airports/:id', async (req, res, next) => {
   }
 });
 
-// Error handling middleware
 app.use((err, req, res, next) => {
   console.error('An error occurred:', err);
   res.status(500).json({ message: 'An internal server error occurred', error: err.message });
